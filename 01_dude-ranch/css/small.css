@@ -1,8 +1,7 @@
-* {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
+/* iphone resize hack  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+/* natural box model hack */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* body rules */
 body {
@@ -12,7 +11,7 @@ body {
 
 /* header rules */
 header {
-  background-color: #17a8e4;
+  background-color: #E0CD71;
   padding: 1rem 2%;
 }
 
@@ -61,7 +60,7 @@ main {
 }
 
 main h1 {
-  color: #17a8e4;
+  color: #111;
 }
 
 main figure img {
