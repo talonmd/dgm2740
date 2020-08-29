@@ -1,7 +1,14 @@
 /* iphone resize hack  */
-html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
 /* natural box model hack */
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 /* body rules */
 body {
@@ -11,7 +18,7 @@ body {
 
 /* header rules */
 header {
-  background-color: #E0CD71;
+  background-color: #e0cd71;
   padding: 1rem 2%;
 }
 
@@ -74,7 +81,7 @@ main figure {
 
 main figcaption {
   text-align: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 footer {

@@ -8,8 +8,12 @@
   nav a {
     padding: 0.5rem 1rem;
   }
-  header, nav, main, footer {
-    max-width: 75rem; margin: auto;
+  header,
+  nav,
+  main,
+  footer {
+    max-width: 75rem;
+    margin: auto;
   }
   main figure {
     width: 23%;
