@@ -15,18 +15,30 @@ html {
 body {
   font-family: $font-family;
   font-weight: $regular-weight;
-  font-size: 16px;
+  font-size: 1rem;
+  background-color: rgb(235, 235, 235);
 }
 
 header {
   background-color: $primary-color;
   padding: 1rem $gutter;
+  .container {
+    padding: 1rem $gutter;
+    display: flex;
+    align-items: center;
+  }
+  img {
+    width: 50px;
+  }
   h1 {
+    padding-left: 1.2rem;
     margin: 0;
     font-size: 1.5rem;
     font-weight: $heavy-weight;
   } // end of h1
   h2 {
+    display: none;
+    padding-left: 1.2rem;
     margin: 0;
     font-size: 1.2rem;
     font-weight: normal;
@@ -57,11 +69,17 @@ nav {
   } // end of a:hover
 } // end of nav
 
+.hero {
+  width: 100%;
+  margin-bottom: -1.5rem;
+}
+
 main {
   display: block;
+  background-color: #fff;
   padding: 1rem $gutter;
   h1 {
-    color: $primary-color;
+    color: #111;
     font-weight: $heavy-weight;
   }
   figure {
@@ -78,7 +96,8 @@ main {
 }
 
 footer {
-  background-color: $primary-color;
+  background-color: #111;
+  color: #eee;
   text-align: center;
   padding: 1rem $gutter;
 }

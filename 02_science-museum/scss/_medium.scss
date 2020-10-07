@@ -5,7 +5,7 @@ nav li {
 
 main figure {
   float: right;
-  width: 48%;
+  width: 50%;
   margin-left: 2%;
   padding-bottom: 0.5rem;
 }
@@ -14,4 +14,17 @@ div.news {
   clear: both;
   column-count: 2;
   column-rule: 1px solid #ddd;
+}
+
+header {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+    display: block;
+  }
+  img {
+    width: 100px;
+  }
 }

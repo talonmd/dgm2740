@@ -1,8 +1,17 @@
 header,
 nav,
-main,
 footer {
-  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.container {
+  max-width: 75rem;
+  margin: auto;
+}
+
+main {
+  max-width: 75rem;
   margin: auto;
 }
 
@@ -17,7 +26,7 @@ nav a {
 }
 
 main figure {
-  width: 31%;
+  width: 33%;
 }
 
 div.news {
