@@ -1,0 +1,125 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*----------- BODY --------------*/
+body {
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+
+/*----------- HEADER --------------*/
+header {
+  padding: 0.5rem 2%;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 120px auto;
+}
+header h1 {
+  margin: 0;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  color: darken($menuColor, 15%);
+}
+header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: darken($menuColor, 15%);
+}
+
+/*----------- NAVIGATION --------------*/
+nav {
+  background-color: $menuColor;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  float: left;
+  width: 25%;
+}
+nav ul li a {
+  display: block;
+  background-color: darken($menuColor, 5%);
+  color: #fff;
+  border-left: 1px solid #fff;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+}
+nav ul li:first-child a {
+  border-left: none;
+}
+
+nav ul li a:hover {
+  background-color: lighten($menuColor, 10%);
+  color: #fff;
+}
+nav ul li.active a {
+  background-color: lighten($menuColor, 10%);
+  color: #fff;
+}
+/*----------- MAIN --------------*/
+main {
+  padding: 0 2%;
+  min-height: 10rem;
+}
+
+div.products-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.products-gallery figure {
+  flex-basis: 46%;
+  margin: 1rem 2%;
+}
+
+div.products-gallery figure img {
+  width: 100%;
+}
+
+/*----------- FOOTER --------------*/
+footer {
+  background-color: $menuColor;
+  padding: 0.5rem 2%;
+  text-align: center;
+  color: #fff;
+}
+
+// div.social {
+//   background-color: $menuColor;
+//   display: flex;
+//   padding: 1rem 0;
+// }
+
+// div.social a {
+//   flex-basis: 25%;
+//   text-align: center;
+//   text-decoration: none;
+//   font-size: 3rem;
+//   color: #fff;
+//   &:hover {
+//     color: pink;
+//   }
+// }
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

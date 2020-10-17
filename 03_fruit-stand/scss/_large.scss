@@ -1,0 +1,26 @@
+header,
+nav,
+main,
+footer {
+  max-width: 71.25rem;
+  margin: auto;
+}
+
+/*----------- BODY --------------*/
+
+/*----------- HEADER --------------*/
+header h1 {
+  font-size: 1.8rem;
+}
+header h2 {
+  font-size: 1.6rem;
+}
+/*----------- NAVIGATION --------------*/
+
+/*----------- MAIN --------------*/
+
+div.products-gallery figure {
+  flex-basis: 21%;
+}
+
+/*----------- FOOTER --------------*/
