@@ -1,0 +1,142 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*----------- BODY --------------*/
+body {
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+
+/*----------- HEADER --------------*/
+header {
+  padding: 0.5rem 2%;
+  background-color: $header-color;
+}
+header h1 {
+  margin: 0;
+}
+header h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
+/*----------- NAVIGATION --------------*/
+nav {
+  background-color: $primary-color;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  float: left;
+  width: 25%;
+}
+nav ul li a {
+  display: block;
+  background-color: darken($primary-color, 10%);
+  color: #eee;
+  border-left: 1px solid $primary-color;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+}
+nav ul li:first-child a {
+  border-left: none;
+}
+nav ul li.active a {
+  background-color: darken($primary-color, 55%);
+  color: #fff;
+}
+nav ul li a:hover {
+  background-color: lighten($primary-color, 50%);
+  color: #333;
+}
+
+/*----------- MAIN --------------*/
+main {
+  padding: 0 2%;
+  min-height: 10rem;
+}
+
+div.members-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  article {
+    width: 100%;
+    margin: 0 0.5rem;
+  }
+}
+
+div.gallery-div {
+  figure {
+    width: 100%;
+    margin: 0;
+    height: 0;
+    padding-bottom: 59.3%;
+    /* 👆 image height / width * 100% */
+    position: relative;
+  }
+  figure img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+  }
+}
+
+.member-fig img {
+  float: right;
+  width: 60%;
+
+  margin: 0.5rem;
+}
+
+.member-fig {
+  &--1 img {
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+  }
+
+  &--2 img {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    shape-outside: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  &--3 img {
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    shape-outside: polygon(100% 0, 0 0, 100% 100%);
+  }
+
+  &--4 img {
+    clip-path: circle(100% at 100% 0);
+    shape-outside: circle(100% at 100% 0);
+  }
+}
+
+/*----------- FOOTER --------------*/
+footer {
+  background-color: $header-color;
+  padding: 0.5rem 2%;
+  text-align: center;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
