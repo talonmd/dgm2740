@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Fill Me In" />
+    <meta name="author" content="John Doe" />
+
+    <!-- This start file was build by Paul Cheney  -->
+    <title>08 News</title>
+
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- STYLE SHEETS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
+    <link href="css/normalize.css" rel="stylesheet" />
+    <!-- phone-default -->
+    <link href="css/small.css" rel="stylesheet" />
+    <!-- enhance-tablet -->
+    <link href="css/medium.css" rel="stylesheet" />
+    <!-- enhance-desktop -->
+    <link href="css/large.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HEADER HERE -->
+    <header>
+      <img class="logo" src="images/logo.png" alt="news" />
+    </header>
+
+    <!-- NAVIGATION HERE -->
+    <nav class="clearfix">
+      <button onclick="toggleMenu()">&#9776;</button>
+      <ul class="hide" id="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Opinion</a></li>
+        <li class="active"><a href="#">Politics</a></li>
+        <li><a href="#">Business</a></li>
+      </ul>
+    </nav>
+
+    <!-- CONTENT HERE -->
+    <main>
+      <h1>Politics</h1>
+      <div class="parent-grid">
+        <div class="lead">
+          <img src="images/lead.jpg" alt="lead" />
+          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
+        </div>
+        <div class="teaser">
+          <img src="images/teaser01.jpg" alt="teaser" />
+          <span>Amet consectetur adipisicing elit</span>
+        </div>
+        <div class="teaser">
+          <img src="images/teaser02.jpg" alt="teaser" />
+          <span>Porro itaque provident cumque architecto</span>
+        </div>
+        <div class="teaser">
+          <img src="images/teaser03.jpg" alt="teaser" />
+          <span>Sit rem a labore, alias</span>
+        </div>
+        <div class="teaser">
+          <img src="images/teaser04.jpg" alt="teaser" />
+          <span>Impedit quisquam culpa magni sit</span>
+        </div>
+        <div class="teaser">
+          <img src="images/teaser05.jpg" alt="teaser" />
+          <span>libero laborum laudantium minima est</span>
+        </div>
+        <div class="teaser">
+          <img src="images/teaser06.jpg" alt="teaser" />
+          <span>adipisicing elit porro itaque provident cumque</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER HERE -->
+    <footer>
+      <div class="footer-container">
+        <div class="list-box">
+          <h3>Sections</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Video</a></li>
+            <li><a href="#">Opinion</a></li>
+            <li><a href="#">Entertainment</a></li>
+            <li><a href="#">Health</a></li>
+          </ul>
+        </div>
+
+        <div class="list-box">
+          <h3>Shows</h3>
+          <ul>
+            <li><a href="#">Happenings</a></li>
+            <li><a href="#">Sunday AM</a></li>
+            <li><a href="#">Newsroom</a></li>
+            <li><a href="#">World</a></li>
+          </ul>
+        </div>
+
+        <div class="list-box">
+          <h3>Tools</h3>
+          <ul>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Media Relations</a></li>
+          </ul>
+        </div>
+
+        <div class="list-box">
+          <h3>Personalites</h3>
+          <ul>
+            <li><a href="#">Jim Johnson</a></li>
+            <li><a href="#">All Avery</a></li>
+            <li><a href="#">Bill Banton</a></li>
+            <li><a href="#">Charlie Christensen</a></li>
+            <li><a href="#">Dave Dingilmire</a></li>
+          </ul>
+        </div>
+      </div>
+      <p>&copy; 2020 &bull; All rights reserved &bull; Talon Durrant</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
