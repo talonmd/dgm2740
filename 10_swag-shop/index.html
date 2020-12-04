@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Fill Me In" />
+    <meta name="author" content="John Doe" />
+
+    <!-- This start file was build by Paul Cheney  -->
+    <title>10 Swag Shop</title>
+
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- STYLE SHEETS -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HEADER HERE -->
+    <header>
+      <img class="logo" src="images/logo.png" alt="swag shop" />
+      <h1>Swag Shop</h1>
+    </header>
+
+    <!-- NAVIGATION HERE -->
+    <nav class="clearfix">
+      <button id="hamburgerBtn">
+        <span><i>&#9776;</i>OPEN</span> <span><i>&otimes;</i>CLOSE</span>
+      </button>
+      <ul id="primaryNav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Deals</a></li>
+        <li class="parent current-menu-item">
+          <a href="#">Order</a>
+          <ul>
+            <li><a href="#">Water Bottles</a></li>
+            <li><a href="#">Hats</a></li>
+            <li><a href="#">Shirts</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Customer Reviews</a></li>
+      </ul>
+    </nav>
+
+    <!-- CONTENT HERE -->
+    <main>
+      <h1>Order Form</h1>
+
+      <form method="get" action="thanks.html">
+        <fieldset>
+          <legend>Customer Information</legend>
+          <label class="top">Full Name*<input type="text" name="fname" required /></label>
+          <label class="top">Phone*<input type="tel" name="phone" placeholder="1235551234" required /></label>
+          <label class="top">Email*<input type="email" name="email" required placeholder="email@email.com" /></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Swag Information</legend>
+          <label class="top">Date Needed <input type="date" name="dateneeded" /> </label>
+          <label class="top">Business Name<input type="text" name="bname" /></label>
+          <label class="top">Business URL<input type="url" name="url" placeholder="http://" /></label>
+          <label class="top"
+            >Color
+            <select name="subject">
+              <option value="">Please Select &#9662;</option>
+              <option value="orange">Orange</option>
+              <option value="blue">Blue</option>
+              <option value="black">Black</option>
+            </select>
+          </label>
+          <label class="top">Quantity <input type="number" name="quantity" /> </label>
+          <div>Material</div>
+          <label class="sbs"><input type="radio" name="material" value="Aluminum" /> Aluminum</label>
+          <label class="sbs"><input type="radio" name="material" value="Plastic" /> Plastic</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment Information</legend>
+
+          <label class="top">Name on Card* <input type="text" name="namecard" required /></label>
+          <label class="top">Card Number* <input type="number" name="cardnum" required /> </label>
+          <label class="top">Expiration Date* <input type="date" name="expdate" required /> </label>
+        </fieldset>
+
+        <input class="submitBtn" type="submit" value="Order my Swag" />
+      </form>
+    </main>
+
+    <!-- FOOTER HERE -->
+    <footer>&copy; 2018 &bull; Paul Cheney &bull; 123-555-6789</footer>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
