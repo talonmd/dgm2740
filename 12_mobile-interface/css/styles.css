@@ -317,12 +317,13 @@ html {
 /*----------- BODY --------------*/
 body {
   font-size: 16px;
-  font-family: Verdana, sans-serif; }
+  font-family: "Lato", sans-serif; }
 
 /*----------- HEADER --------------*/
 header {
   padding: 0.5rem 2%;
-  background-color: #ddd; }
+  background-color: blue;
+  color: #eee; }
 
 header h1 {
   margin: 0; }
@@ -333,16 +334,17 @@ header h2 {
 
 /*----------- NAVIGATION --------------*/
 nav {
-  background-color: #666;
+  background-color: blue;
   position: fixed;
   bottom: 0;
   width: 100%;
-  z-index: 100; }
+  z-index: 100;
+  margin: 0 auto; }
 
 nav ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 !important;
   display: flex; }
 
 nav ul li {
@@ -351,40 +353,47 @@ nav ul li {
 nav ul li a {
   display: block;
   width: 100%;
+  height: 100%;
   text-transform: uppercase;
   color: #eee;
   padding: 1rem 0.5rem;
   text-decoration: none;
   font-size: 0.9rem;
   text-align: center; }
-
-nav ul li:first-child a {
-  border-left: none; }
-
-nav ul li a:hover {
-  background-color: #eee;
-  color: #333; }
+  nav ul li a i {
+    display: block;
+    font-size: 1.8rem;
+    margin: 0.2rem 0 0.5rem 0; }
 
 nav ul li.active a {
-  background-color: #000;
-  color: #fff; }
+  background-color: navy; }
+
+nav ul li a:hover {
+  background-color: #000099; }
 
 /*----------- MAIN --------------*/
 main {
   padding: 0 2%;
-  min-height: 10rem; }
+  min-height: 10rem;
+  padding-bottom: 6rem; }
 
 #hotels-div {
   display: grid;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;
+  grid-gap: 15px; }
+  #hotels-div section {
+    padding: 0.5rem;
+    background-color: #f0f0f0; }
   #hotels-div div {
     display: grid;
     grid-template-columns: 1fr 1fr; }
     #hotels-div div span i {
+      color: blue;
       float: left;
-      font-size: 1.5rem; }
+      font-size: 2.5rem;
+      padding: 1rem 0; }
     #hotels-div div span p {
-      padding-left: 1.6rem; }
+      padding-left: 2.8rem; }
 
 figure {
   position: relative;
@@ -397,7 +406,7 @@ figcaption {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: pink;
+  background-color: rgba(85, 85, 85, 0.425);
   color: white;
   padding: 0.8rem 0.3rem; }
 
@@ -439,7 +448,8 @@ footer {
   /*----------- FOOTER --------------*/ }
 /* end of media query */
 @media only screen and (min-width: 64rem) {
-  header, nav, main, footer {
+  main,
+  footer {
     max-width: 64rem;
     margin: auto; }
 
