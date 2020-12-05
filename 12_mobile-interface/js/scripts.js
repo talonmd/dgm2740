@@ -1,5 +1,5 @@
 // what is the path to the JSON file?
-const jsonData = "../hoteldata.json"
+const jsonData = "/12_mobile-interface/hoteldata.json"
 
 //Go fetch it and then wait for a response.
 fetch(jsonData)
