@@ -13,26 +13,18 @@ html {
 
 /*----------- BODY --------------*/
 body {
-  font-size: 16px;
-  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-family: "Padauk", sans-serif;
+  p {
+    line-height: 1.3rem;
+  }
 }
 
 /*----------- HEADER --------------*/
-
-#headerWrapper {
-  background-image: url("../images/repeating-bg.jpg");
-  background-color: #ddd;
-  z-index: 1;
-}
-
 header {
-  background-image: url("../images/bg-small-350.jpg");
-  color: darken(gray, 40%);
-  z-index: 2;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: auto;
   padding: 0.5rem 2%;
+  background-color: $mainColor;
+  color: #eee;
 }
 header h1 {
   margin: 0;
@@ -41,13 +33,15 @@ header h2 {
   margin: 0;
   font-weight: normal;
 }
-
-/*----------- NAVIGATION --------------*/
-
-#navWrapper {
-  background-color: #89b9ea;
+header figure.logo {
+  float: left;
+  margin: 0 2% 0 0;
 }
 
+/*----------- NAVIGATION --------------*/
+nav {
+  background-color: $secondaryColor;
+}
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -59,19 +53,19 @@ nav ul li {
 }
 nav ul li a {
   display: block;
-  background-color: darken(#89b9ea, 10%);
+  background-color: darken($secondaryColor, 5%);
   color: #eee;
-  border-left: 1px solid black;
+  border-left: 1px solid #eee;
   padding: 0.5rem 0;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 nav ul li:first-child a {
   border-left: none;
 }
 nav ul li.active a {
-  background-color: darken(#89b9ea, 25%);
+  background-color: darken($secondaryColor, 35%);
   color: #fff;
 }
 nav ul li a:hover {
@@ -80,45 +74,23 @@ nav ul li a:hover {
 }
 
 /*----------- MAIN --------------*/
-
-#mainWrapper {
-  background-color: lightgrey;
-}
-
-iframe {
-  width: 100%;
-}
-
 main {
-  background-color: white;
   padding: 0 2%;
   min-height: 10rem;
-  padding-bottom: 1rem;
-
-  h1 {
-    margin: 0;
-    padding-top: 1rem;
-  }
 
   figure {
-    margin: 0;
-    width: 100%;
+    width: 50%;
+    float: right;
+
     img {
       width: 100%;
     }
   }
-  figcaption {
-    text-align: center;
-    font-size: 0.8rem;
-  }
 }
 
 /*----------- FOOTER --------------*/
-
-#footerWrapper {
-  background-color: #89b9ea;
-}
 footer {
+  background-color: $mainColor;
   padding: 0.5rem 2%;
   text-align: center;
 }
@@ -128,115 +100,4 @@ footer {
   content: "";
   display: table;
   clear: both;
-}
-
-/// ANIMATIONS
-
-.deer,
-.kangaroo {
-  width: 80px;
-  position: relative;
-}
-
-.deer {
-  animation-name: deer;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-delay: 2s;
-  transform: rotateY(180deg);
-}
-
-@keyframes deer {
-  0% {
-    transform: translate(0, 0) rotate(-5deg) rotateY(180deg);
-  }
-
-  49% {
-    transform: translate(200px, 0) rotate(-1deg) rotateY(180deg);
-  }
-
-  50% {
-    transform: translate(200px, 0) rotate(5deg) rotateY(0);
-  }
-
-  100% {
-    transform: translate(0, 0) rotate(-1deg) rotateY(0);
-  }
-}
-
-.kangaroo {
-  width: 120px;
-  animation-name: kangaroo;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
-  transform: translateX(400px);
-}
-
-@keyframes kangaroo {
-  0% {
-    transform: translateX(400px);
-  }
-
-  5% {
-    transform: translate(380px, -20px) rotate(10deg);
-  }
-
-  10% {
-    transform: translate(360px, 0) rotate(-10deg);
-  }
-
-  15% {
-    transform: translate(340px, -20px) rotate(10deg);
-  }
-
-  20% {
-    transform: translate(320px, 0) rotate(-10deg);
-  }
-
-  25% {
-    transform: translate(300px, -20px) rotate(10deg);
-  }
-
-  30% {
-    transform: translate(280px, 0) rotate(-10deg);
-  }
-
-  35% {
-    transform: translate(260px, -20px) rotate(10deg);
-  }
-
-  40% {
-    transform: translate(240px, 0) rotate(-10deg);
-  }
-
-  45% {
-    transform: translate(220px, -20px) rotate(10deg);
-  }
-
-  50% {
-    transform: translate(240px, 0) rotate(-10deg) rotateY(180deg);
-  }
-
-  65% {
-    transform: translate(280px, 0) rotate(0) rotateY(180deg);
-  }
-
-  70% {
-    transform: translate(300px, 0) rotate(-10deg) rotateY(180deg);
-  }
-  75% {
-    transform: translate(320px, 0) rotate(10deg) rotateY(180deg);
-  }
-  80% {
-    transform: translate(340px, 0) rotate(-10deg) rotateY(180deg);
-  }
-  90% {
-    transform: translate(360px, 0) rotate(10deg) rotateY(180deg);
-  }
-  95% {
-    transform: translate(380px, 0) rotate(-10deg) rotateY(180deg);
-  }
-  100% {
-    transform: translate(400px, 0) rotate(0) rotateY(0);
-  }
 }
