@@ -386,7 +386,8 @@ main {
 footer {
   background-color: #131f55;
   padding: 0.5rem 2%;
-  text-align: center; }
+  text-align: center;
+  color: #eee; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
