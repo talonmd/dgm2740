@@ -610,7 +610,7 @@ footer {
     outline: none; }
   .slick-list.dragging {
     cursor: pointer;
-    cursor: hand; }
+    cursor: pointer; }
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
