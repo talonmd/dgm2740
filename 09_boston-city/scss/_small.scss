@@ -89,11 +89,16 @@ main {
   min-height: 10rem;
 }
 
+img {
+  width: 100%;
+}
+
 #slider {
   picture {
     position: relative;
     margin-bottom: -2rem;
     z-index: 1;
+    width: 100%;
   }
 
   div.caption {

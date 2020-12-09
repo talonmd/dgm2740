@@ -386,10 +386,14 @@ main {
   padding: 0 2%;
   min-height: 10rem; }
 
+img {
+  width: 100%; }
+
 #slider picture {
   position: relative;
   margin-bottom: -2rem;
-  z-index: 1; }
+  z-index: 1;
+  width: 100%; }
 #slider div.caption {
   color: white;
   z-index: 5000;
