@@ -1,37 +1,51 @@
 /*----------- BODY --------------*/
 
-div#pageWrapper {
-  max-width: 64rem;
+header,
+nav,
+section,
+div.container,
+div.hero-image {
+  max-width: $max-width;
   margin: auto;
-  grid-template-areas:
-    "header"
-    "navigation"
-    "content"
-    "footer";
+}
 
-  grid-template-columns: auto;
+section.full-width,
+footer {
+  max-width: 100%;
 }
 
 /*----------- HEADER --------------*/
 
 /*----------- NAVIGATION --------------*/
-nav ul li {
-  flex-basis: auto;
-  a {
-    padding: 0.6rem 1rem;
-  }
-}
 
 /*----------- MAIN --------------*/
 
 main {
-  figure {
-    width: 25%;
-    float: right;
+  padding: 0;
+  section.our-formula {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    div.container {
+      div.fb-75 {
+        flex-basis: 75%;
+      }
+      div.fb-25 {
+        flex-basis: 25%;
+        text-align: right;
+      }
+    }
   }
-
-  figure.left {
-    float: left;
+  section.about-us {
+    div.blogs-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  section.featured {
+    grid-template-areas:
+      "infra tech pricing"
+      "support support pricing";
   }
 }
 

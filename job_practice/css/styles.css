@@ -314,23 +314,53 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-div#pageWrapper {
-  font-family: "Roboto", sans-serif;
-  display: grid;
-  grid-template-areas: "hamburger" "header" "content" "footer" "navigation"; }
-
 /*----------- BODY --------------*/
 body {
   font-size: 16px;
-  font-family: Verdana, sans-serif; }
+  font-family: "Roboto", sans-serif;
+  background-color: #dadada; }
+
+main {
+  background-color: #dadada;
+  padding: 0 2%; }
+
+h2 {
+  color: #095e80;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 0; }
+
+h3 {
+  color: yellow;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.8rem; }
+
+.h3--large {
+  font-size: 2rem;
+  font-weight: bold; }
+
+h4 {
+  color: #095e80;
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin-bottom: 0; }
+
+h5 {
+  font-size: 1.4rem;
+  font-weight: 400; }
+
+p {
+  font-weight: 300; }
 
 /*----------- HEADER --------------*/
 header {
-  grid-area: header;
-  padding: 0.5rem 2%;
-  background-color: #1c304f; }
-  header img {
-    width: 150px; }
+  padding: 0 2%; }
+  header .logo {
+    width: 250px;
+    margin-bottom: 0;
+    margin-left: 0; }
   header h1 {
     margin: 0; }
   header h2 {
@@ -338,83 +368,137 @@ header {
     font-weight: normal; }
 
 /*----------- NAVIGATION --------------*/
-a.myjump {
-  display: block;
-  width: 60px;
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 1.7rem;
-  padding: 0.4rem;
-  text-decoration: none;
-  padding-left: 2%; }
-
 nav {
-  grid-area: navigation;
-  background-color: #f2f2f2;
-  height: 100vh; }
+  border-top: 1px solid gray;
+  margin: 1rem 0 0 0;
+  padding: 0; }
 
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap; }
+  display: flex; }
 
 nav ul li {
-  flex-basis: 100%; }
+  flex-basis: 33.33%;
+  margin: 0 0.5rem; }
 
 nav ul li a {
   display: block;
-  background-color: #f2f2f2;
-  color: #1c304f;
+  color: gray;
+  font-weight: 300;
   padding: 0.5rem 0;
   text-decoration: none;
-  font-size: 0.9rem;
-  text-align: center; }
+  font-size: 1.1rem;
+  text-align: center;
+  text-transform: uppercase; }
+
+nav ul li a i {
+  font-size: 1.1rem;
+  display: block; }
 
 nav ul li.active a {
-  background-color: #81d7ed;
-  color: #1c304f; }
+  color: #2b2b2b;
+  font-weight: 400; }
 
 nav ul li a:hover {
-  background-color: #97def0;
-  color: #000; }
-
-/*----------- HAMBURGER --------------*/
-div#hamburger {
-  grid-area: hamburger;
-  background-color: #f2f2f2; }
+  color: black;
+  font-weight: 400; }
 
 /*----------- MAIN --------------*/
 main {
-  grid-area: content;
-  padding: 0 2%;
   min-height: 10rem;
-  background-color: #fff; }
-  main h1 {
-    margin: 0;
-    padding: 1rem 0 0 0; }
-  main p {
-    margin: 0;
-    padding: 0.5rem 0;
-    line-height: 1.6; }
-
-figure {
-  margin: 0.5rem;
-  width: 100%; }
-  figure img {
+  background-color: #e0e0e0; }
+  main div.hero-image {
     width: 100%; }
-
-figcaption {
-  text-align: center;
-  font-size: 0.8rem; }
+    main div.hero-image img {
+      width: 100%; }
+  main section.our-formula {
+    background-color: black;
+    color: #fff;
+    margin-right: -2%;
+    margin-left: -2%;
+    padding-left: 2%;
+    padding-right: 2%; }
+    main section.our-formula div.container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap; }
+      main section.our-formula div.container div.fb-75 {
+        flex-basis: 100%; }
+      main section.our-formula div.container div.fb-25 {
+        flex-basis: 100%; }
+  main div.blogs-grid,
+  main section.featured {
+    background: #cdcdcf;
+    background: linear-gradient(180deg, #cdcdcf 0%, #ededed 11%, #e0e0e0 100%);
+    border-top: 1px solid gray; }
+  main section.about-us div.blogs-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.4rem;
+    padding-top: 1rem; }
+    main section.about-us div.blogs-grid .blog img {
+      width: 100%; }
+  main section.featured {
+    display: grid;
+    grid-template-areas: "infra" "tech" "support" "pricing";
+    grid-gap: 25px;
+    padding-top: 1rem; }
+    main section.featured img {
+      width: 100%; }
+    main section.featured div.infrastructure {
+      grid-area: infra; }
+    main section.featured div.technology {
+      grid-area: tech; }
+    main section.featured div.support {
+      grid-area: support; }
+    main section.featured div.pricing {
+      grid-area: pricing;
+      background-color: #fff; }
+      main section.featured div.pricing button {
+        color: #eee;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 300;
+        padding: 0.7rem 1rem;
+        width: 75%;
+        margin-left: 12.5%;
+        background: #034762;
+        background: -moz-linear-gradient(0deg, #034762 29%, #0d7198 100%);
+        background: -webkit-linear-gradient(0deg, #034762 29%, #0d7198 100%);
+        background: linear-gradient(0deg, #034762 29%, #0d7198 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#034762",endColorstr="#0d7198",GradientType=1);
+        border-radius: 20px;
+        border: 0; }
+      main section.featured div.pricing p {
+        color: gray;
+        text-align: center; }
+  main section.clients {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem auto 0 auto;
+    background-color: #fff;
+    padding: 1rem 0.5rem; }
+    main section.clients div {
+      flex-basis: 15%; }
+      main section.clients div img {
+        width: 100%; }
 
 /*----------- FOOTER --------------*/
 footer {
-  grid-area: footer;
-  background-color: #1c304f;
-  color: white;
-  padding: 0.5rem 2%;
-  text-align: center; }
+  background: #034762;
+  background: -moz-linear-gradient(0deg, #034762 29%, #0d7198 100%);
+  background: -webkit-linear-gradient(0deg, #034762 29%, #0d7198 100%);
+  background: linear-gradient(0deg, #034762 29%, #0d7198 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#034762",endColorstr="#0d7198",GradientType=1);
+  color: #eee;
+  padding: 0.8rem 2%;
+  text-align: left;
+  margin-bottom: 2rem;
+  font-weight: 400; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
@@ -424,42 +508,64 @@ footer {
 
 @media only screen and (min-width: 35rem) {
   /*----------- BODY --------------*/
-  div#pageWrapper {
-    grid-template-areas: "header header" "navigation content" "footer footer";
-    grid-template-columns: 150px auto; }
-
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
   nav {
-    height: auto; }
-
-  a.myjump {
-    display: none; }
+    margin-left: 90px;
+    margin-top: 0; }
+    nav ul {
+      justify-content: flex-end; }
+    nav ul li {
+      flex-basis: auto; }
+    nav ul li a i {
+      display: inline; }
 
   /*----------- MAIN --------------*/
+  main section.our-formula div.container div.fb-75 {
+    flex-basis: 65%; }
+  main section.our-formula div.container div.fb-25 {
+    flex-basis: 35%;
+    text-align: right; }
+  main section.about-us div.blogs-grid {
+    grid-template-columns: 1fr 1fr; }
+  main section.featured {
+    grid-template-areas: "infra tech" "support pricing"; }
+
   /*----------- FOOTER --------------*/ }
 /* end of media query */
 @media only screen and (min-width: 64rem) {
   /*----------- BODY --------------*/
-  div#pageWrapper {
+  header,
+  nav,
+  section,
+  div.container,
+  div.hero-image {
     max-width: 64rem;
-    margin: auto;
-    grid-template-areas: "header" "navigation" "content" "footer";
-    grid-template-columns: auto; }
+    margin: auto; }
+
+  section.full-width,
+  footer {
+    max-width: 100%; }
 
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
-  nav ul li {
-    flex-basis: auto; }
-    nav ul li a {
-      padding: 0.6rem 1rem; }
-
   /*----------- MAIN --------------*/
-  main figure {
-    width: 25%;
-    float: right; }
-  main figure.left {
-    float: left; }
+  main {
+    padding: 0; }
+    main section.our-formula {
+      margin-right: 0;
+      margin-left: 0;
+      padding-left: 0;
+      padding-right: 0; }
+      main section.our-formula div.container div.fb-75 {
+        flex-basis: 75%; }
+      main section.our-formula div.container div.fb-25 {
+        flex-basis: 25%;
+        text-align: right; }
+    main section.about-us div.blogs-grid {
+      grid-template-columns: repeat(4, 1fr); }
+    main section.featured {
+      grid-template-areas: "infra tech pricing" "support support pricing"; }
 
   /*----------- FOOTER --------------*/ }
 /* end of media query */

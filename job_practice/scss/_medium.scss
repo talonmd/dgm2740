@@ -1,26 +1,49 @@
 /*----------- BODY --------------*/
 
-div#pageWrapper {
-  grid-template-areas:
-    "header header"
-    "navigation content"
-    "footer footer";
-
-  grid-template-columns: 150px auto;
-}
-
 /*----------- HEADER --------------*/
 
 /*----------- NAVIGATION --------------*/
 
 nav {
-  height: auto;
-}
+  margin-left: 90px;
+  margin-top: 0;
 
-a.myjump {
-  display: none;
+  ul {
+    justify-content: flex-end;
+  }
+
+  ul li {
+    flex-basis: auto;
+  }
+
+  ul li a i {
+    display: inline;
+  }
 }
 
 /*----------- MAIN --------------*/
+main {
+  section.our-formula {
+    div.container {
+      div.fb-75 {
+        flex-basis: 65%;
+      }
+      div.fb-25 {
+        flex-basis: 35%;
+        text-align: right;
+      }
+    }
+  }
+  section.about-us {
+    div.blogs-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  section.featured {
+    grid-template-areas:
+      "infra tech"
+      "support pricing";
+  }
+}
 
 /*----------- FOOTER --------------*/

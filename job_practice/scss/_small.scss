@@ -11,30 +11,61 @@ html {
   box-sizing: border-box;
 }
 
-div#pageWrapper {
-  font-family: "Roboto", sans-serif;
-  display: grid;
-  grid-template-areas:
-    "hamburger"
-    "header"
-    "content"
-    "footer"
-    "navigation";
-}
-
 /*----------- BODY --------------*/
 body {
   font-size: 16px;
-  font-family: Verdana, sans-serif;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(218, 218, 218);
+}
+
+main {
+  background-color: rgb(218, 218, 218);
+  padding: 0 2%;
+}
+
+h2 {
+  color: $primaryColor;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+h3 {
+  color: yellow;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.h3--large {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h4 {
+  color: $primaryColor;
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin-bottom: 0;
+}
+
+h5 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+p {
+  font-weight: 300;
 }
 
 /*----------- HEADER --------------*/
 header {
-  grid-area: header;
-  padding: 0.5rem 2%;
-  background-color: $primaryColor;
-  img {
-    width: 150px;
+  padding: 0 2%;
+  .logo {
+    width: 250px;
+    margin-bottom: 0;
+    margin-left: 0;
   }
   h1 {
     margin: 0;
@@ -46,92 +77,179 @@ header {
 }
 
 /*----------- NAVIGATION --------------*/
-a.myjump {
-  display: block;
-  width: 60px;
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 1.7rem;
-  padding: 0.4rem;
-  text-decoration: none;
-  padding-left: 2%;
-}
 
 nav {
-  grid-area: navigation;
-  background-color: darken($accentColor, 5%);
-
-  height: 100vh;
+  border-top: 1px solid $color-grey;
+  margin: 1rem 0 0 0;
+  padding: 0;
 }
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
-  flex-wrap: wrap;
 }
 nav ul li {
-  flex-basis: 100%;
+  flex-basis: 33.33%;
+  margin: 0 0.5rem;
 }
 nav ul li a {
   display: block;
-  background-color: darken($accentColor, 5%);
-  color: $primaryColor;
+  color: $color-grey;
+  font-weight: 300;
   padding: 0.5rem 0;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   text-align: center;
+  text-transform: uppercase;
+}
+nav ul li a i {
+  font-size: 1.1rem;
+  display: block;
 }
 nav ul li.active a {
-  background-color: darken($accentBlue, 5%);
-  color: $primaryColor;
+  color: rgb(43, 43, 43);
+  font-weight: 400;
 }
 nav ul li a:hover {
-  background-color: $accentBlue;
-  color: #000;
-}
-
-/*----------- HAMBURGER --------------*/
-div#hamburger {
-  grid-area: hamburger;
-  background-color: darken($accentColor, 5%);
+  color: black;
+  font-weight: 400;
 }
 
 /*----------- MAIN --------------*/
-main {
-  grid-area: content;
-  padding: 0 2%;
-  min-height: 10rem;
-  background-color: #fff;
-  h1 {
-    margin: 0;
-    padding: 1rem 0 0 0;
-  }
-  p {
-    margin: 0;
-    padding: 0.5rem 0;
-    line-height: 1.6;
-  }
-}
 
-figure {
-  margin: 0.5rem;
-  width: 100%;
-  img {
+main {
+  min-height: 10rem;
+  background-color: rgb(224, 224, 224);
+
+  div.hero-image {
     width: 100%;
+    img {
+      width: 100%;
+    }
   }
-}
-figcaption {
-  text-align: center;
-  font-size: 0.8rem;
+
+  section.our-formula {
+    background-color: black;
+    color: #fff;
+    margin-right: -2%;
+    margin-left: -2%;
+    padding-left: 2%;
+    padding-right: 2%;
+
+    div.container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      div.fb-75 {
+        flex-basis: 100%;
+      }
+      div.fb-25 {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  div.blogs-grid,
+  section.featured {
+    background: rgb(205, 205, 207);
+    background: linear-gradient(180deg, rgba(205, 205, 207, 1) 0%, rgba(237, 237, 237, 1) 11%, rgba(224, 224, 224, 1) 100%);
+    border-top: 1px solid $color-grey;
+  }
+
+  section.about-us {
+    div.blogs-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1.4rem;
+      padding-top: 1rem;
+      .blog {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  section.featured {
+    display: grid;
+    grid-template-areas:
+      "infra"
+      "tech"
+      "support"
+      "pricing";
+    grid-gap: 25px;
+    padding-top: 1rem;
+
+    img {
+      width: 100%;
+    }
+    div.infrastructure {
+      grid-area: infra;
+    }
+    div.technology {
+      grid-area: tech;
+    }
+    div.support {
+      grid-area: support;
+    }
+    div.pricing {
+      grid-area: pricing;
+      background-color: #fff;
+
+      button {
+        color: #eee;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 300;
+        padding: 0.7rem 1rem;
+        width: 75%;
+        margin-left: 12.5%;
+        background: rgb(3, 71, 98);
+        background: -moz-linear-gradient(0deg, rgba(3, 71, 98, 1) 29%, rgba(13, 113, 152, 1) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(3, 71, 98, 1) 29%, rgba(13, 113, 152, 1) 100%);
+        background: linear-gradient(0deg, rgba(3, 71, 98, 1) 29%, rgba(13, 113, 152, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#034762",endColorstr="#0d7198",GradientType=1);
+        border-radius: 20px;
+        border: 0;
+      }
+
+      p {
+        color: $color-grey;
+        text-align: center;
+      }
+    }
+  }
+
+  section.clients {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem auto 0 auto;
+    background-color: #fff;
+    padding: 1rem 0.5rem;
+    div {
+      flex-basis: 15%;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 /*----------- FOOTER --------------*/
 footer {
-  grid-area: footer;
-  background-color: $primaryColor;
-  color: $accentColor;
-  padding: 0.5rem 2%;
-  text-align: center;
+  background: rgb(3, 71, 98);
+  background: -moz-linear-gradient(0deg, rgba(3, 71, 98, 1) 29%, rgba(13, 113, 152, 1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(3, 71, 98, 1) 29%, rgba(13, 113, 152, 1) 100%);
+  background: linear-gradient(0deg, rgba(3, 71, 98, 1) 29%, rgba(13, 113, 152, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#034762",endColorstr="#0d7198",GradientType=1);
+  color: #eee;
+  padding: 0.8rem 2%;
+  text-align: left;
+  margin-bottom: 2rem;
+  font-weight: 400;
 }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
