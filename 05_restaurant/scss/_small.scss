@@ -1,0 +1,104 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*----------- BODY --------------*/
+body {
+  font-size: 18px;
+  font-family: "Padauk", sans-serif;
+  p {
+    line-height: 1.3rem;
+  }
+}
+
+/*----------- HEADER --------------*/
+header {
+  padding: 0.5rem 2%;
+  background-color: $mainColor;
+  color: #eee;
+}
+header h1 {
+  margin: 0;
+}
+header h2 {
+  margin: 0;
+  font-weight: normal;
+}
+header figure.logo {
+  float: left;
+  margin: 0 2% 0 0;
+}
+
+/*----------- NAVIGATION --------------*/
+nav {
+  background-color: $secondaryColor;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  float: left;
+  width: 25%;
+}
+nav ul li a {
+  display: block;
+  background-color: darken($secondaryColor, 5%);
+  color: #eee;
+  border-left: 1px solid #eee;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-align: center;
+}
+nav ul li:first-child a {
+  border-left: none;
+}
+nav ul li.active a {
+  background-color: darken($secondaryColor, 35%);
+  color: #fff;
+}
+nav ul li a:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+/*----------- MAIN --------------*/
+main {
+  padding: 0 2%;
+  min-height: 10rem;
+
+  figure {
+    width: 50%;
+    float: right;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/*----------- FOOTER --------------*/
+footer {
+  background-color: $mainColor;
+  padding: 0.5rem 2%;
+  text-align: center;
+  color: #eee;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

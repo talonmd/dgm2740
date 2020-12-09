@@ -1,0 +1,52 @@
+/*----------- BODY --------------*/
+
+header,
+nav,
+section,
+div.container,
+div.hero-image {
+  max-width: $max-width;
+  margin: auto;
+}
+
+section.full-width,
+footer {
+  max-width: 100%;
+}
+
+/*----------- HEADER --------------*/
+
+/*----------- NAVIGATION --------------*/
+
+/*----------- MAIN --------------*/
+
+main {
+  padding: 0;
+  section.our-formula {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    div.container {
+      div.fb-75 {
+        flex-basis: 75%;
+      }
+      div.fb-25 {
+        flex-basis: 25%;
+        text-align: right;
+      }
+    }
+  }
+  section.about-us {
+    div.blogs-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  section.featured {
+    grid-template-areas:
+      "infra tech pricing"
+      "support support pricing";
+  }
+}
+
+/*----------- FOOTER --------------*/

@@ -1,0 +1,188 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*----------- BODY --------------*/
+body {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+
+/*----------- HEADER --------------*/
+header {
+  padding: 0.5rem 2%;
+  background-image: url("../images/header-bg.jpg");
+  color: white;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+header h2 {
+  margin: 0;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+/*----------- NAVIGATION --------------*/
+nav {
+  background-color: $primaryColor;
+}
+
+nav ul.hide {
+  display: none;
+}
+
+nav button {
+  cursor: pointer;
+  margin: 0.2rem 2%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  float: left;
+  width: 100%;
+}
+nav ul li a {
+  display: block;
+  background-color: darken($primaryColor, 10%);
+  color: #eee;
+  border-left: 1px solid #777;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+}
+nav ul li:first-child a {
+  border-left: none;
+}
+
+nav ul li a:hover {
+  background-color: rgb(218, 218, 218);
+  color: #333;
+}
+nav ul li.active a {
+  background-color: darken($primaryColor, 30%);
+  color: #fff;
+}
+/*----------- MAIN --------------*/
+main {
+  padding: 0 2%;
+  min-height: 10rem;
+}
+
+#slider {
+  picture {
+    position: relative;
+    margin-bottom: -2rem;
+    z-index: 1;
+  }
+
+  div.caption {
+    color: white;
+    z-index: 5000;
+    text-shadow: 0 0 25px black;
+
+    background-color: black;
+
+    padding-left: 1rem;
+  }
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+
+  div {
+    flex-basis: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    min-height: 300px;
+  }
+
+  div a {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 2%;
+    transition: all 0.5s ease-in;
+    color: white;
+  }
+
+  div a i {
+    font-size: 3rem;
+  }
+
+  div:nth-child(1) {
+    background-image: url("../images/poster3.jpg");
+  }
+  div:nth-child(1) a {
+    background-color: rgb(137, 90, 151);
+  }
+  div:nth-child(2) {
+    background-image: url("../images/poster4.jpg");
+  }
+  div:nth-child(2) a {
+    background-color: rgb(127, 71, 133);
+  }
+  div:nth-child(3) {
+    background-image: url("../images/poster1.jpg");
+  }
+  div:nth-child(3) a {
+    background-color: rgb(107, 68, 117);
+  }
+  div:nth-child(4) {
+    background-image: url("../images/poster2.jpg");
+  }
+  div:nth-child(4) a {
+    background-color: rgb(131, 82, 136);
+  }
+
+  div a:hover {
+    background: none;
+    text-shadow: 0 0 4px black;
+  }
+}
+
+/*----------- FOOTER --------------*/
+footer {
+  background-color: #252525;
+  color: white;
+  padding: 0.5rem 2%;
+  text-align: center;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

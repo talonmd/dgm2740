@@ -1,0 +1,233 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*----------- BODY --------------*/
+body {
+  font-size: 16px;
+  font-family: "Lato", serif;
+}
+
+/*----------- HEADER --------------*/
+header {
+  padding: 1rem 2%;
+  border-top: 8px solid $accent-color;
+  background-color: $header-color;
+  color: #eee;
+}
+header h1 {
+  margin: 0;
+  font-weight: bold;
+}
+header h2 {
+  margin: 0;
+  font-weight: normal;
+  margin: 0.5rem 0 0 0;
+  font-size: 98%;
+}
+.header-container {
+  position: relative;
+  .searchbox {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 40px;
+    padding: 0.5rem;
+    border: 0;
+  }
+}
+
+/*----------- NAVIGATION --------------*/
+nav {
+  background-color: $primary-color;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  float: left;
+  width: 25%;
+}
+nav ul li a {
+  display: block;
+  background-color: darken($primary-color, 10%);
+  color: #eee;
+  border-left: 1px solid $primary-color;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+}
+nav ul li:first-child a {
+  border-left: none;
+}
+nav ul li.active a {
+  background-color: darken($primary-color, 55%);
+  color: #fff;
+}
+nav ul li a:hover {
+  background-color: lighten($primary-color, 50%);
+  color: #333;
+}
+
+/*----------- MAIN --------------*/
+main {
+  padding: 0;
+  min-height: 10rem;
+
+  p {
+    line-height: 1.4;
+  }
+}
+
+div.flex {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 1rem 0 3rem 0;
+}
+.column {
+  padding: 0 $gutter;
+}
+@for $i from 1 through 12 {
+  $w: ($i / 12) * 100%;
+  .small-#{$i} {
+    flex-basis: $w;
+  }
+} // end loop
+
+div.lawyer-card {
+  background-color: rgb(238, 238, 238);
+  text-align: center;
+
+  h3 {
+    padding: 1rem 0 0 0;
+  }
+  img {
+    width: 100%;
+  }
+  button {
+    margin: 1rem 0;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    background-color: $accent-color;
+    border: none;
+    color: #eee;
+    cursor: pointer;
+    &:hover {
+      background-color: #eee;
+      color: $accent-color;
+      border: 1px solid $accent-color;
+    }
+  }
+}
+
+.cat {
+  margin: 1rem 0;
+}
+
+button.cat-button {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 0;
+  background-color: $header-color;
+  color: #eee;
+  padding: 1.5rem 1rem;
+  border: 2px solid $header-color;
+
+  &:hover {
+    border: 2px solid black;
+  }
+}
+
+div.blog-post {
+  background-color: rgb(238, 238, 238);
+  img {
+    width: 100%;
+  }
+
+  h3 {
+    padding: 0 0.5rem;
+  }
+
+  p {
+    padding: 0 0.5rem;
+  }
+
+  button {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    padding: 0.6rem 0;
+    text-transform: uppercase;
+    border-top: 1px solid $primary-color;
+
+    &:hover {
+      background-color: #333;
+      color: #eee;
+    }
+  }
+}
+
+div.tip {
+  background-color: $header-color;
+
+  h3 {
+    font-size: 1.8rem;
+  }
+}
+
+div.tip p a,
+div.faq p a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/*----------- FOOTER --------------*/
+footer {
+  .social {
+    display: flex;
+  }
+  background-color: darkblue;
+
+  a {
+    color: white;
+    text-align: center;
+    flex-basis: 25%;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+  }
+
+  a:hover {
+    color: gray;
+  }
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

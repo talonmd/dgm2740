@@ -1,0 +1,44 @@
+/*----------- BODY --------------*/
+
+/*----------- HEADER --------------*/
+
+/*----------- NAVIGATION --------------*/
+nav {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(175deg, rgba(2, 0, 36, 1) 0%, rgba(120, 9, 121, 1) 35%, rgba(255, 0, 134, 1) 100%);
+}
+
+nav button {
+  display: none;
+}
+
+nav ul.hide {
+  display: block;
+}
+
+nav ul {
+  margin-left: 2%;
+}
+nav ul li {
+  width: auto;
+}
+nav ul li:first-child a {
+  border-left: 1px solid #777;
+}
+nav ul li:last-child a {
+  border-right: 1px solid #777;
+}
+nav ul li a {
+  padding: 0.5rem 1rem;
+  background: none;
+}
+
+/*----------- MAIN --------------*/
+
+#cards {
+  div {
+    flex-basis: 50%;
+  }
+}
+
+/*----------- FOOTER --------------*/
