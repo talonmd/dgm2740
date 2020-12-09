@@ -373,6 +373,9 @@ nav ul li a:hover {
   color: #333; }
 
 /*----------- MAIN --------------*/
+img {
+  width: 100%; }
+
 main {
   padding: 0 2%;
   min-height: 10rem; }
