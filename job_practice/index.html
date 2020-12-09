@@ -21,8 +21,7 @@
       <!-- HEADER HERE -->
       <header>
         <figure class="logo">
-          <img src="images/logo.png" alt="logo" />
-          <!-- srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x" -->
+          <img src="images/logo1x.png" alt="logo" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x" />
         </figure>
       </header>
 
@@ -45,7 +44,11 @@
 
       <main>
         <div class="hero-image">
-          <img src="images/hero.png" alt="hero" />
+          <picture>
+            <source srcset="images/hero-small.png" media="(max-width: 600px)" />
+            <source srcset="images/hero-large.png" media="(min-width: 601px)" />
+            <img src="images/hero-large.png" alt="hero" />
+          </picture>
         </div>
 
         <section class="full-width our-formula">
@@ -76,25 +79,45 @@
           <h2>More About Us</h2>
           <div class="blogs-grid">
             <div class="blog">
-              <img src="images/persistance.png" alt="persistance" />
+              <picture>
+                <source srcset="images/persistance.png" media="(max-width: 600px)" />
+                <source srcset="images/persistance400.png" media="(min-width: 601px)" />
+                <img src="images/persistance.png" alt="persistance" />
+              </picture>
+
               <h4>Our Persistance</h4>
               <p>Sed, cursus, in nunc adipiscing phasellus in turpis etiam! Nec, placerat! Tortor, et et vel, nunc? Proin quis tincidunt scelerisque porttitor? Dapibus. Ultricies! Velit magna urna. Porta quis odio natoque arcu pulvinar aenean, ut pellentesque! Nec proin montes! Pid elit lacus.sagittis dignissim vut.</p>
             </div>
 
             <div class="blog">
-              <img src="images/process.png" alt="process" />
+              <picture>
+                <source srcset="images/process.png" media="(max-width: 600px)" />
+                <source srcset="images/process400.png" media="(min-width: 601px)" />
+                <img src="images/process.png" alt="process" />
+              </picture>
+
               <h4>Our Process</h4>
               <p>In nunc adipiscing phasellus in turpis etiam! Nec, placerat! Tortor, et et vel, nunc? Proin quis tincidunt scelerisque porttitor? Dapibus. Ultricies! Velit magna urna. Porta quis odio natoque arcu pulvinar aenean, ut pellentesque! Nec proin montes! Pid elit lacus. Amet non facilisis massa.</p>
             </div>
 
             <div class="blog">
-              <img src="images/people.png" alt="people" />
+              <picture>
+                <source srcset="images/people.png" media="(max-width: 600px)" />
+                <source srcset="images/people400.png" media="(min-width: 601px)" />
+                <img src="images/people.png" alt="people" />
+              </picture>
+
               <h4>Our People</h4>
               <p>Adipiscing phasellus in turpis etiam! Nec, placerat! Tortor, montes magna. Augue et pulvinar proin dapibus! Urna nec, pid purus, augue velit. Nunc, eu lorem et! Augue hac, diam phasellus, augue turpis velit, ac? Augue sagittis dignissim vut.</p>
             </div>
 
             <div class="blog">
-              <img src="images/payoff.png" alt="payoff" />
+              <picture>
+                <source srcset="images/payoff.png" media="(max-width: 600px)" />
+                <source srcset="images/payoff400.png" media="(min-width: 601px)" />
+                <img src="images/payoff.png" alt="payoff" />
+              </picture>
+
               <h4>Our Payoff</h4>
               <p>Elit! Sed, cursus, in nunc adipiscing phasellus in turpis etiam! Nec, placerat! Tortor, et et vel, nunc? Proin quis tincidunt scelerisque porttitor? Dapibus! Urna nec, pid purus, augue velit. Nunc, eu lorem et! Augue hac, diam phasellus, augue turpis velit, ac? Augue sagittis dignissim vut.</p>
             </div>
@@ -103,12 +126,22 @@
 
         <section class="featured">
           <div class="infrastructure">
-            <img src="images/infrastructure.png" alt="infrastructure" />
+            <picture>
+              <source srcset="images/infrastructure.png" media="(max-width: 600px)" />
+              <source srcset="images/infrastructure-large.png" media="(min-width: 601px)" />
+              <img src="images/infrastructure.png" alt="infrastructure" />
+            </picture>
+
             <h4>Infrastructure</h4>
             <p>Urna pid? Cras, eros risus mattis ridiculus tortor eu rhoncus porta lundium rhoncus massa porttitor, amet diam sociis dictumst elementum mid pulvinar. Lectus odio, nec turpis, et sagittis amet amet!</p>
           </div>
           <div class="technology">
-            <img src="images/technology.png" alt="cms technology" />
+            <picture>
+              <source srcset="images/technology.png" media="(max-width: 600px)" />
+              <source srcset="images/technology-large.png" media="(min-width: 601px)" />
+              <img src="images/technology.png" alt="cms technology" />
+            </picture>
+
             <h4>Technology</h4>
             <p>elementum mid pulvinar. Lectus odio, nec turpis, et sagittis amet amet Urna pid? Cras, eros risus mattis ridiculus tortor eu rhoncus porta lundium rhoncus massa porttitor, amet diam sociis dictumst !</p>
           </div>
@@ -117,7 +150,12 @@
             <p>placerat dignissim lorem eu duis, quis aenean! Sagittis ridiculus aenean cras eu a, augue, sed sed rhoncus dictumst a? Scelerisque. Dapibus in etiam, natoque porta nunc in. Hac duis, et et, tincidunt lorem et. Amet sed aliquam egestas etiam, nec. Aliquet, quis enim, quis, in odio rhoncus, parturient pid risus nunc, lundium dapibus odio. Aenean eu pid sociis risus! Pellentesque montes elementum eros! Integer magna.</p>
           </div>
           <div class="pricing">
-            <img src="images/company-growth.png" alt="graph" />
+            <picture>
+              <source srcset="images/company-growth.png" media="(max-width: 600px)" />
+              <source srcset="images/company-growth-large.png" media="(min-width: 601px)" />
+              <img src="images/company-growth.png" alt="graph" />
+            </picture>
+
             <div>
               <button>See Pricing</button>
               <p>Company Growth 2012 - 2016</p>
@@ -159,8 +197,8 @@
       {
         "@context": "http://schema.org",
         "@type": "LocalBusiness",
-        "name": "TechWatch",
-        "description": "Keep up to date with the latest tech hardware.",
+        "name": "BlueRiver Studios",
+        "description": "A solution for all your digital needs",
         "openingHours": "Mo-Fr 09:00-17:00",
         "telephone": "+8015551234",
         "address": {
@@ -169,8 +207,8 @@
           "addressLocality": "Provo",
           "addressRegion": "UT"
         },
-        "image": "images/logo.png",
-        "priceRange": "Free"
+        "image": "images/logo1x.png",
+        "priceRange": "varies"
       }
     </script>
   </body>
