@@ -1,0 +1,11 @@
+<svg  version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+  <rect x='1' y='1' width='20' height='20' stroke='black' fill='none' stroke-width='2'>
+    <animate attributeName='rx' values='0;5;0' dur='5s' repeatCount='indefinite' />
+  </rect>
+  <line x1='10' y1='15' x2='16' y2='6' stroke-width='2' stroke='black' stroke-linecap='round'>
+    <animate attributeName='stroke' values='green;red;green' dur='5s' repeatCount='indefinite' />
+  </line>
+  <line x1='6' y1='12' x2='10' y2='15' stroke-width='2' stroke='black' stroke-linecap='round'>
+    <animate attributeName='stroke' values='green;red;green' dur='5s' repeatCount='indefinite' />
+  </line>
+</svg>
