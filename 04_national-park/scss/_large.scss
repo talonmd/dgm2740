@@ -1,8 +1,9 @@
-header,
+div.topbar,
 nav,
+header h1,
 main,
 footer {
-  max-width: 64rem;
+  max-width: 60rem;
   margin: auto;
 }
 
@@ -10,12 +11,44 @@ footer {
 
 /*----------- HEADER --------------*/
 
+#headerWrapper {
+  background-image: url('../images/tagged/header-large.jpg');
+  height: 400px;
+  background-size: cover;
+}
+
 header {
-  background-image: url("../images/bg-large-960-blended.jpg");
+  h1 {
+    font-size: 2.8rem;
+    padding: 2.8rem 2vw;
+  }
 }
 
 /*----------- NAVIGATION --------------*/
 
+nav {
+  button {
+    display: none;
+  }
+  ul,
+  ul.open {
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    li {
+      border: none;
+    }
+  }
+}
+
 /*----------- MAIN --------------*/
+
+main {
+  .card-deck {
+    .card {
+      flex-basis: 31.3%;
+    }
+  }
+}
 
 /*----------- FOOTER --------------*/

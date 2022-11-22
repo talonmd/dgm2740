@@ -2,34 +2,27 @@
 
 /*----------- HEADER --------------*/
 
+#headerWrapper {
+  background-image: url('../images/tagged/header-medium.jpg');
+  height: 240px;
+}
+
 header {
-  background-image: url("../images/bg-medium-560.jpg");
-  background-size: cover;
+  h1 {
+    font-size: 2rem;
+    padding: 2rem 2vw;
+  }
 }
 
 /*----------- NAVIGATION --------------*/
-nav ul {
-  margin-left: 2%;
-}
-nav ul li {
-  width: auto;
-}
-nav ul li:first-child a {
-  border-left: 1px solid #777;
-}
-nav ul li:last-child a {
-  border-right: 1px solid #777;
-}
-nav ul li a {
-  padding: 0.5rem 1rem;
-}
 
 /*----------- MAIN --------------*/
 
 main {
-  figure {
-    width: 33%;
-    float: right;
+  .card-deck {
+    .card {
+      flex-basis: 48%;
+    }
   }
 }
 

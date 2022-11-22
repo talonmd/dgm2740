@@ -14,38 +14,54 @@ html {
 /*----------- BODY --------------*/
 body {
   font-size: 16px;
-  font-family: "Roboto Slab", serif;
+  font-family: 'Roboto Slab', serif;
 }
 
-/*----------- HEADER --------------*/
+/*----------- TOPBAR --------------*/
 
-#headerWrapper {
-  background-image: url("../images/repeating-bg.jpg");
-  background-color: #ddd;
-  z-index: 1;
+#topbarWrapper {
+  background-color: black;
 }
 
-header {
-  background-image: url("../images/bg-small-350.jpg");
-  color: darken(gray, 40%);
-  z-index: 2;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: auto;
-  padding: 0.5rem 2%;
-}
-header h1 {
-  margin: 0;
-}
-header h2 {
-  margin: 0;
-  font-weight: normal;
+div.topbar {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 2vw;
 }
 
 /*----------- NAVIGATION --------------*/
 
+$nav-background: #2f4939;
+
 #navWrapper {
-  background-color: #89b9ea;
+  background-color: $nav-background;
+}
+
+nav {
+  padding: 0 2vw;
+
+  button {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: darken($nav-background, 10%);
+  }
+
+  ul {
+    display: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  ul.open {
+    display: block;
+  }
 }
 
 nav ul {
@@ -54,29 +70,43 @@ nav ul {
   margin: 0;
 }
 nav ul li {
-  float: left;
-  width: 25%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 nav ul li a {
   display: block;
-  background-color: darken(#89b9ea, 10%);
   color: #eee;
-  border-left: 1px solid black;
-  padding: 0.5rem 0;
+  padding: 0.9rem 2vw;
   text-decoration: none;
   font-size: 0.9rem;
-  text-align: center;
 }
 nav ul li:first-child a {
   border-left: none;
 }
 nav ul li.active a {
-  background-color: darken(#89b9ea, 25%);
-  color: #fff;
+  background-color: darken($nav-background, 5%);
 }
 nav ul li a:hover {
-  background-color: #eee;
-  color: #333;
+  background-color: darken($nav-background, 5%);
+}
+
+/*----------- HEADER --------------*/
+
+#headerWrapper {
+  background-image: url('../images/tagged/header-small.jpg');
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  h1 {
+    padding: 1rem 2vw;
+    margin: 0;
+    font-size: 1.6rem;
+    color: white;
+  }
 }
 
 /*----------- MAIN --------------*/
@@ -85,13 +115,9 @@ nav ul li a:hover {
   background-color: lightgrey;
 }
 
-iframe {
-  width: 100%;
-}
-
 main {
   background-color: white;
-  padding: 0 2%;
+  padding: 0 2vw;
   min-height: 10rem;
   padding-bottom: 1rem;
 
@@ -100,143 +126,85 @@ main {
     padding-top: 1rem;
   }
 
-  figure {
-    margin: 0;
-    width: 100%;
-    img {
-      width: 100%;
+  $card-border-radius: 10px;
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1%;
+    position: relative;
+    .card {
+      flex-basis: 100%;
+      border: 1px solid #999;
+      background-color: rgb(206, 210, 206);
+      border-radius: $card-border-radius;
+      margin: 1rem 1%;
+      text-align: center;
+      section {
+        font-weight: bold;
+        font-size: 1.6rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid #999;
+      }
+      img {
+        padding: 1rem;
+        width: 50%;
+      }
+      p {
+        padding: 0 2vw;
+        margin: 0;
+      }
+      a {
+        display: block;
+        background-color: $nav-background;
+        color: white;
+        padding: 1rem 0;
+        margin: 1rem 2vw;
+        border-radius: $card-border-radius;
+        text-decoration: none;
+      }
+      a:hover {
+        background-color: lighten($nav-background, 10%);
+      }
     }
-  }
-  figcaption {
-    text-align: center;
-    font-size: 0.8rem;
+    .card:hover {
+      img {
+        animation: sidle 1s infinite;
+      }
+    }
   }
 }
 
 /*----------- FOOTER --------------*/
 
 #footerWrapper {
-  background-color: #89b9ea;
+  background-color: $nav-background;
 }
 footer {
-  padding: 0.5rem 2%;
+  padding: 0.5rem 2vw;
   text-align: center;
+  color: white;
 }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
 
 /// ANIMATIONS
 
-.deer,
-.kangaroo {
-  width: 80px;
-  position: relative;
-}
-
-.deer {
-  animation-name: deer;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-delay: 2s;
-  transform: rotateY(180deg);
-}
-
-@keyframes deer {
+@keyframes sidle {
   0% {
-    transform: translate(0, 0) rotate(-5deg) rotateY(180deg);
+    transform: rotate(-5deg);
   }
-
-  49% {
-    transform: translate(200px, 0) rotate(-1deg) rotateY(180deg);
+  33% {
+    transform: rotate(5deg);
   }
-
-  50% {
-    transform: translate(200px, 0) rotate(5deg) rotateY(0);
-  }
-
-  100% {
-    transform: translate(0, 0) rotate(-1deg) rotateY(0);
-  }
-}
-
-.kangaroo {
-  width: 120px;
-  animation-name: kangaroo;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
-  transform: translateX(400px);
-}
-
-@keyframes kangaroo {
-  0% {
-    transform: translateX(400px);
-  }
-
-  5% {
-    transform: translate(380px, -20px) rotate(10deg);
-  }
-
-  10% {
-    transform: translate(360px, 0) rotate(-10deg);
-  }
-
-  15% {
-    transform: translate(340px, -20px) rotate(10deg);
-  }
-
-  20% {
-    transform: translate(320px, 0) rotate(-10deg);
-  }
-
-  25% {
-    transform: translate(300px, -20px) rotate(10deg);
-  }
-
-  30% {
-    transform: translate(280px, 0) rotate(-10deg);
-  }
-
-  35% {
-    transform: translate(260px, -20px) rotate(10deg);
-  }
-
-  40% {
-    transform: translate(240px, 0) rotate(-10deg);
-  }
-
-  45% {
-    transform: translate(220px, -20px) rotate(10deg);
-  }
-
-  50% {
-    transform: translate(240px, 0) rotate(-10deg) rotateY(180deg);
-  }
-
-  65% {
-    transform: translate(280px, 0) rotate(0) rotateY(180deg);
-  }
-
-  70% {
-    transform: translate(300px, 0) rotate(-10deg) rotateY(180deg);
-  }
-  75% {
-    transform: translate(320px, 0) rotate(10deg) rotateY(180deg);
-  }
-  80% {
-    transform: translate(340px, 0) rotate(-10deg) rotateY(180deg);
-  }
-  90% {
-    transform: translate(360px, 0) rotate(10deg) rotateY(180deg);
-  }
-  95% {
-    transform: translate(380px, 0) rotate(-10deg) rotateY(180deg);
+  66% {
+    transform: rotate(-5deg);
   }
   100% {
-    transform: translate(400px, 0) rotate(0) rotateY(0);
+    transform: rotate(-5deg);
   }
 }

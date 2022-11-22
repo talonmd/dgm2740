@@ -17,44 +17,86 @@
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- HEADER HERE -->
-    <div id="headerWrapper">
-      <header>
-        <h1>National Park</h1>
-        <h2>Adventure of a Lifetime</h2>
-      </header>
+    <!-- TOPBAR HERE -->
+    <div id="topbarWrapper">
+      <div class="topbar">Your National Parks</div>
     </div>
 
     <!-- NAVIGATION HERE -->
     <div id="navWrapper">
       <nav class="clearfix">
-        <ul>
-          <li><a href="#">Visit</a></li>
-          <li><a href="#">Sites</a></li>
-          <li><a href="#">Donate</a></li>
-          <li class="active"><a href="#">Events</a></li>
+        <button id="hamburger-button">&#9776;</button>
+        <ul id="primary-navigation">
+          <li><a href="#">Information</a></li>
+          <li><a href="#">Alerts</a></li>
+          <li><a href="#">Maps</a></li>
+          <li><a href="#">Fees</a></li>
+          <li class="active"><a href="#">Plan a Visit</a></li>
         </ul>
       </nav>
+    </div>
+
+    <!-- HEADER HERE -->
+    <div id="headerWrapper">
+      <header>
+        <h1>Shenandoah National Park</h1>
+      </header>
     </div>
 
     <!-- CONTENT HERE -->
     <div id="mainWrapper">
       <main>
-        <h1>Events</h1>
-        <h2>Visit our Animals</h2>
-        <img class="deer" src="images/deer.png" alt="deer" />
-        <img class="kangaroo" src="images/kangaroo.png" alt="kangaroo" />
-        <figure>
-          <img src="images/arches.jpg" alt="arches" />
-          <figcaption>Visit our National Park</figcaption>
-        </figure>
-        <p>Conveniently repurpose multifunctional imperatives before corporate technology. Holisticly orchestrate cross functional portals vis-a-vis fully tested imperatives. Dynamically transform low-risk high-yield leadership and long-term high-impact systems. Dramatically build resource sucking internal or "organic" sources before high standards in action items.</p>
+        <h1>Plan a Visit</h1>
+        <div class="card-deck">
+          <div class="card">
+            <section>Reservations</section>
+            <img src="images/building.svg" alt="building" />
+            <p>Enthusiastically negotiate proactive synergy whereas wireless value. Professionally iterate virtual bandwidth through backwardcompatible meta-services.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <!-- end of card -->
 
-        <p>Proactively pursue go forward ideas vis-a-vis impactful quality vectors. Monotonectally predominate cross-unit web services without front-end action items. Enthusiastically disintermediate e-business testing procedures after granular deliverables. Objectively productivate premium users before revolutionary partnerships.</p>
+          <div class="card">
+            <section>Fees</section>
+            <img src="images/money.svg" alt="money" />
+            <p>Negotiate proactive synergy whereas wireless value. Professionally iterate virtual bandwidth through backward-compatible meta-services.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <!-- end of card -->
 
-        <p>Objectively productivate premium users before revolutionary partnerships. Collaboratively aggregate best-of-breed systems without installed base leadership skills. Energistically exploit effective solutions with fully researched data. Completely leverage existing standardized ROI through collaborative content.</p>
-        <!-- <h2>Location</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152217.50244783!2d-111.05584160976626!3d44.71230788211639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x534e1fa4815fb5c5%3A0x787b6f4f28a2bb6d!2sYellowstone%20National%20Park%2C%20WY%2082190!5e0!3m2!1sen!2sus!4v1605239187299!5m2!1sen!2sus" height="450"></iframe> -->
+          <div class="card">
+            <section>Activities</section>
+            <img src="images/person.svg" alt="person" />
+            <p>Markets negotiate proactive synergy whereas wireless value. Professionally iterate virtual bandwidth through backward-compatible meta-services.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <!-- end of card -->
+
+          <div class="card">
+            <section>New Topic</section>
+            <img src="images/checkmark.svg" alt="checkmark" />
+            <p>Enthusiastically negotiate proactive synergy whereas wireless value. Professionally iterate virtual bandwidth through backwardcompatible meta-services.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <!-- end of card -->
+
+          <div class="card">
+            <section>Another Topic</section>
+            <img src="images/document.svg" alt="document" />
+            <p>Negotiate proactive synergy whereas wireless value. Professionally iterate virtual bandwidth through backward-compatible meta-services.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <!-- end of card -->
+
+          <div class="card">
+            <section>Last Topic</section>
+            <img src="images/location.svg" alt="location" />
+            <p>Markets negotiate proactive synergy whereas wireless value. Professionally iterate virtual bandwidth through backward-compatible meta-services</p>
+            <a href="#">Learn more</a>
+          </div>
+          <!-- end of card -->
+        </div>
+        <!-- end of card deck -->
       </main>
     </div>
 
@@ -62,5 +104,7 @@
     <div id="footerWrapper">
       <footer>&copy; 2020 &bull; Talon Durrant &bull; Login</footer>
     </div>
+
+    <script src="js/scripts.js"></script>
   </body>
 </html>
